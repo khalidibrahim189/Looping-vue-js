@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Tabel Data Vue js</title>
+</head>
+
+<body>
+    <h3 class="text-center">Data Mahasiswa</h3>
+    <div id="app">
+        <div class="container">
+            <table class="table table-bordered table-striped">
+                <thead class="text-center">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Jurusan</th>
+                        <th>Asal</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-center">
+                    <tr v-for="item in items" v-bind:key="item.id">
+                        <td>
+                            {{ item.id }}
+                        </td>
+                        <td>
+                            {{ item.nama }}
+                        </td>
+                        <td>
+                            {{ item.jurusan }}
+                        </td>
+                        <td>
+                            {{ item.asal }}
+                        </td>
+                        <td>
+                            {{ item.phone }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
